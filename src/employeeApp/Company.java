@@ -75,6 +75,7 @@ public class Company {
         if (index >= 0 && index < developerNames.length) {
             if (developerNames[index] == null) {
                 developerNames[index] = name;
+                System.out.println("Employee " + name + " is assigned to index " + index);
             } else {
                 System.out.println("The employee at index " + index + " is already assigned.");
             }

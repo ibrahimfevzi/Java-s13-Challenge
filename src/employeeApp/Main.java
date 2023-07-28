@@ -19,13 +19,13 @@ public class Main
 
         // Create Employee objects with healthplans
         String[] healthplans1 = {basicPlan.getName()};
-        Employee employee1 = new Employee(1, "John Doe", "john@example.com", "password123", healthplans1);
+        Employee employee1 = new Employee(1, "Ibrahim", "ibrahimfevzi@gmail.com", "password123", healthplans1);
 
         String[] healthplans2 = {standardPlan.getName()};
-        Employee employee2 = new Employee(2, "Jane Smith", "jane@example.com", "pass456", healthplans2);
+        Employee employee2 = new Employee(2, "Ali Veli", "ali@gmail.com.com", "pass456", healthplans2);
 
         String[] healthplans3 = {premiumPlan.getName()};
-        Employee employee3 = new Employee(3, "Mike Johnson", "mike@example.com", "mikepass", healthplans3);
+        Employee employee3 = new Employee(3, "Ayşe Mert", "ayse@gmail.com", "pass", healthplans3);
 
         // Add more healthplans to employees
         employee1.addHealthplan(2, premiumPlan.getName());
@@ -41,9 +41,9 @@ public class Main
         Company company = new Company(1, "ABC Corp", 5000, developers);
 
         // Add more employees to company
-        company.addEmployee(3, "Alice Johnson");
-        company.addEmployee(4, "Bob Williams");
-        company.addEmployee(5, "Eve Brown");
+        company.addEmployee(4, "Hasan Kara");
+        company.addEmployee(5, "Kerem Tuncer");
+        company.addEmployee(6, "Meyra Mert");
 
         // Print objects
         System.out.println("Healthplan objects:\n" + basicPlan + "\n" + standardPlan + "\n" + premiumPlan);
