@@ -13,6 +13,43 @@ public class Main
     private static void workWithData ()
     {
 
+        Healthplan.Plan basicPlan = Healthplan.Plan.BASIC;
+        Healthplan.Plan standardPlan = Healthplan.Plan.STANDARD;
+        Healthplan.Plan premiumPlan = Healthplan.Plan.PREMIUM;
+
+        // Create Employee objects with healthplans
+        String[] healthplans1 = {basicPlan.getName()};
+        Employee employee1 = new Employee(1, "John Doe", "john@example.com", "password123", healthplans1);
+
+        String[] healthplans2 = {standardPlan.getName()};
+        Employee employee2 = new Employee(2, "Jane Smith", "jane@example.com", "pass456", healthplans2);
+
+        String[] healthplans3 = {premiumPlan.getName()};
+        Employee employee3 = new Employee(3, "Mike Johnson", "mike@example.com", "mikepass", healthplans3);
+
+        // Add more healthplans to employees
+        employee1.addHealthplan(2, premiumPlan.getName());
+        employee1.addHealthplan(4, standardPlan.getName());
+        employee1.addHealthplan(5, basicPlan.getName());
+
+        employee2.addHealthplan(2, basicPlan.getName());
+
+        employee3.addHealthplan(3, premiumPlan.getName());
+
+        // Create Company object with employees
+        String[] developers = {employee1.getFullName(), employee2.getFullName(), employee3.getFullName()};
+        Company company = new Company(1, "ABC Corp", 5000, developers);
+
+        // Add more employees to company
+        company.addEmployee(3, "Alice Johnson");
+        company.addEmployee(4, "Bob Williams");
+        company.addEmployee(5, "Eve Brown");
+
+        // Print objects
+        System.out.println("Healthplan objects:\n" + basicPlan + "\n" + standardPlan + "\n" + premiumPlan);
+        System.out.println("\nEmployee objects:\n" + employee1 + "\n" + employee2 + "\n" + employee3);
+        System.out.println("\nCompany object:\n" + company);
+
     }
 
     /**
